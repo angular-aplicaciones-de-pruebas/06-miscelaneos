@@ -1,0 +1,27 @@
+
+<div [ngSwitch]="alerta">
+  <div *ngSwitchCase="'success'">success</div>
+  <div *ngSwitchCase="'info'">info</div>
+  <div *ngSwitchCase="'warning'">warning</div>
+  <div *ngSwitchDefault>danger</div>
+</div>
+
+<div [ngSwitch]="alerta">
+  <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+    A simple success alert—check it out!
+  </div>
+  <div  *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+    A simple info alert—check it out!
+  </div>
+  <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+    A simple warning alert—check it out!
+  </div>
+  <div *ngSwitchDefault class="alert alert-danger" role="alert">
+    A simple danger alert—check it out!
+  </div>
+</div>
+
+<button [style.margin.px]="'5'" type="button" (click)="alerta = 'success'" class="btn btn-success"><i [style.margin.px]="'5'" class="fa fa-success">Success</i></button>
+<button [style.margin.px]="'5'" type="button" (click)="alerta = 'info'" class="btn btn-info"><i [style.margin.px]="'5'" class="fa fa-info">Info</i></button>
+<button [style.margin.px]="'5'" type="button" (click)="alerta = 'warning'" class="btn btn-warning"><i [style.margin.px]="'5'" class="fa fa-warning">Warning</i></button>
+<button [style.margin.px]="'5'" type="button" (click)="alerta = ''" class="btn btn-danger"><i [style.margin.px]="'5'" class="fa fa-danger">Danger</i></button>
